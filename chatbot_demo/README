@@ -1,5 +1,5 @@
-sept 22 2024
-demo version of chatbot service
+nov 1 2024
+showcase of chatbot interviewer project
 see requirements.txt for all used python libraries
 requires .env file with database and openai key parameters
 
