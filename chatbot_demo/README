@@ -1,0 +1,36 @@
+sept 22 2024
+demo version of chatbot service
+see requirements.txt for all used python libraries
+requires .env file with database and openai key parameters
+
+chatbot_service.py:
+    backend chatbot server that serves http requests
+    saves histories into a dictionary
+    to run:
+        uvicorn chatbot_service:app --reload
+
+prompt_builder:
+    helper module to build the prompts and instructions of the bots
+    contains two config files
+    bot_config for introductory message
+    prompt_config for prompt and questions
+    to create more presets other than "default", make new json entries inside the first curly brackets
+    the choice of preset must be hard coded into the chatbot on lines 14 and 15
+
+session_manager.py:
+    session manager to create, delete, observe sessions
+    to run:
+        python3 session_manager.py
+    commands:
+        create {session_id}
+        delete {session_id}
+        info
+
+streamlit_app.py:
+    frontend using streamlit
+    login using pre-existing session_id to fetch corresponding chat_history
+    to run:
+        streamlit run streamlit_app.py
+
+
+database implementation in progress (unused)

@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+openai
+requests
+streamlit
+logging
+uuid
+typing
+python-dotenv
+#database
+sqlalchemy
+asyncpg
+alembic
+psycopg2-binary
